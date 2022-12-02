@@ -9,14 +9,14 @@ class Day1(
 
     override operator fun invoke(): Answer {
         return Answer(
-            getAnswerDay1(),
-            getAnswerDay2()
+            getAnswerPart1(),
+            getAnswerPart2()
         )
     }
 
-    private fun getAnswerDay1(): String = topCaloriesSum(top = 1).toString()
+    private fun getAnswerPart1(): String = topCaloriesSum(top = 1).toString()
 
-    private fun getAnswerDay2(): String = topCaloriesSum(top = 3).toString()
+    private fun getAnswerPart2(): String = topCaloriesSum(top = 3).toString()
 
     private tailrec fun topCaloriesSum(
         n: Int = 0,
