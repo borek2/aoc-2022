@@ -18,7 +18,12 @@ class Day1(
 
     private fun getAnswerDay2(): String = topCaloriesSum(top = 3).toString()
 
-    private fun topCaloriesSum(n: Int = 0, calories: Int = 0, maxCalories: List<Int> = emptyList(), top: Int): Int =
+    private tailrec fun topCaloriesSum(
+        n: Int = 0,
+        calories: Int = 0,
+        maxCalories: List<Int> = emptyList(),
+        top: Int,
+    ): Int =
         when {
             n >= input.size -> maxCalories.plus(calories).sortedDescending().take(top).sum()
             input[n] == "" -> topCaloriesSum(n + 1, 0, maxCalories.plus(calories), top)
