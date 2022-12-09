@@ -1,7 +1,4 @@
-import assignments.Day1
-import assignments.Day2
-import assignments.Day3
-import assignments.Day4
+import assignments.*
 
 fun main(args: Array<String>) {
     val answers = listOf(
@@ -9,6 +6,7 @@ fun main(args: Array<String>) {
         Day2(),
         Day3(),
         Day4(),
+        Day5(),
     ).joinToString("\n") {
         "${it::class.java.simpleName}\n${it()}\n"
     }
