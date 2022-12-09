@@ -7,6 +7,7 @@ fun main(args: Array<String>) {
         Day3(),
         Day4(),
         Day5(),
+        Day6(),
     ).joinToString("\n") {
         "${it::class.java.simpleName}\n${it()}\n"
     }
